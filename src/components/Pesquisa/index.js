@@ -1,12 +1,9 @@
 import { TextField } from '@mui/material';
-import style from './Pesquisa.module.css'
-import Botao from 'components/BotaoNav';
-import { useCadastradoContext } from 'contextos/Cadastros';
+import style from './Pesquisa.module.css';
+import Botao from 'components/Botao';
 
-function Pesquisa() {
-
-    const {adicionarCadastro} = useCadastradoContext();
-
+function Pesquisa({busca}) {    
+    
     return(
         <div className={style.div}>
             <TextField className={style.textFild}
@@ -14,7 +11,7 @@ function Pesquisa() {
                 label="Codigo do banco"
                 type="number"
             />
-            <Botao func={adicionarCadastro} />
+            <Botao text="Pesquisar" />
         </div>
     )
 }

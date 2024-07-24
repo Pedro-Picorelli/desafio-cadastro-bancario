@@ -12,7 +12,7 @@ function Home() {
                 text="Aqui você pode ver e cadastrar contas bancarias"
                 mensagemBotao="Cadastre uma nova conta bancaria +"
             />
-            <Secao children={cadastrado.map((e) => <p>{e}</p>)} />
+            <Secao children={cadastrado.length ? cadastrado.map((e) => <p>{e}</p>) : 'Nenhuma conta cadastrada'} />
         </>
     )
 }

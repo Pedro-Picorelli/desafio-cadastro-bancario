@@ -1,5 +1,6 @@
-.textFild {
-    align-items: center;
+
+.sec {
+    width: 90%;
     text-align: center;
-    border: 20%;
+    margin: auto;
 }

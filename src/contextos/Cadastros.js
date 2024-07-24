@@ -8,7 +8,7 @@ export default function CadastradosProvider({ children }) {
 
     return (
         <CadastradosContext.Provider
-        value={{cadastrado,setCadastrado}}>
+            value={{ cadastrado, setCadastrado }}>
             {children}
         </CadastradosContext.Provider>
     )
@@ -16,13 +16,17 @@ export default function CadastradosProvider({ children }) {
 
 export function useCadastradoContext() {
     const { cadastrado, setCadastrado } = useContext(CadastradosContext);
+    
+    function adicionarCadastro(novoCadastro) {
+        
+        let novaLista = [...cadastrado]
+        novaLista.push(novoCadastro)
+    
+        setCadastrado(novaLista)
 
-    function cadastrarConta(novoCadastro) {
-
-        return setCadastrado([...cadastrado, novoCadastro])
     }
     return {
         cadastrado,
-        cadastrarConta
+        adicionarCadastro
     }
 }

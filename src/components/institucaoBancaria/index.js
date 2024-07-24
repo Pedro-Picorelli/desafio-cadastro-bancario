@@ -1,4 +1,4 @@
-import style from './Conteudo.module.css'
+import style from './institucoesBancarias.module.css'
 import React, { useState, useEffect } from 'react';
 
 function Conteudo() {

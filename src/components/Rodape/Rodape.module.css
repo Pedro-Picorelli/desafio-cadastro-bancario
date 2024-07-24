@@ -4,7 +4,7 @@
     background-color: var(--verde);
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -12,6 +12,6 @@
 
 .rodape h2 {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 10px;
     color: var(--branco);
 }

@@ -4,7 +4,7 @@ import Home from "pages/Home";
 import Cadastro from "pages/Cadastro";
 import Listagem from "pages/Listagem";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CadastradosProvider from "contextos/Cadasstros";
+import CadastradosProvider from "contextos/Cadastros";
 
 function AppRoutes() {
     return (

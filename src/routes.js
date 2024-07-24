@@ -1,8 +1,8 @@
 import Cabecalho from "components/Cabecalho";
 import Rodape from "components/Rodape";
 import Home from "pages/Home";
-import Cadastro from "pages/Home/Cadastro";
-import Listagem from "pages/Home/Listagem";
+import Cadastro from "pages/Cadastro";
+import Listagem from "pages/Listagem";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function AppRoutes() {

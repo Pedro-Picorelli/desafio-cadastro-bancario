@@ -1,12 +1,11 @@
 import Botao from "components/Botao";
-import Conteudo from "components/Conteudo";
+import { Link } from "react-router-dom";
 
 function Home() {
     
     return (
         <>
-            <Botao> Cadastre uma nova conta bancaria +</Botao>
-            <Conteudo />
+            <Botao><Link to="./Listagem" />Cadastre uma nova conta bancaria +</Botao>
         </>
     )
 }

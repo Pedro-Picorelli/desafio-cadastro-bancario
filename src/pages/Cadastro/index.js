@@ -1,4 +1,4 @@
-import style from './Cadastro.modules.css';
+import style from './Cadastro.module.css';
 
 function Cadastro() {
     return(

@@ -1,8 +1,8 @@
-import './Botao.modules.css'
+import style from './Botao.module.css'
 
 const Botao = ({children}) => {
     return (
-        <button className='botao'>
+        <button className={style.botao}>
             {children}
         </button>
     )

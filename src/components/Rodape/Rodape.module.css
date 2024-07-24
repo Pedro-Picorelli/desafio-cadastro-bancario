@@ -2,7 +2,12 @@
     display: flex;
     justify-content: center;
     background-color: var(--verde);
-    
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .rodape h2 {

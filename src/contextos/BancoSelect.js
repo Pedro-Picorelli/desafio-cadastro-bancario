@@ -18,7 +18,10 @@ export function useBancoSelectContext() {
     const {banco, setBanco} = useContext(BancoSelectContext);
 
     function selecionarBanco(bancoSelcionado) {
-        setBanco(banco)
+        // console.log(bancoSelcionado)
+        let novoBanco = bancoSelcionado
+        // console.log(novoBanco)
+        setBanco(novoBanco)
     }
     return{
         banco,

@@ -2,21 +2,24 @@ import Titulo from 'components/Titulo';
 import * as React from 'react';
 import style from './Listagem.module.css';
 import Secao from 'components/Secao';
-import Pesquisa from 'components/Pesquisa';
 import { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import Botao from 'components/Botao';
 import { TextField } from '@mui/material';
+import { useBancoSelectContext } from 'contextos/BancoSelect';
+import { Link } from 'react-router-dom';
 
 function Listagem() {
+
+    const {selecionarBanco} = useBancoSelectContext();
+
     const [dataBank, setDataBank] = useState([]);
     const [codigoBanco, setCodigoBanco] = useState('');
     const [pesquisa, setPesquisa] = useState('https://brasilapi.com.br/api/banks/v1');
 
     const montarPesquisa = () => {
-        console.log('buscando...');
         if (codigoBanco) {
             setPesquisa(`https://brasilapi.com.br/api/banks/v1/${codigoBanco}`);
         } else {
@@ -57,9 +60,10 @@ function Listagem() {
                             aria-label="Vertical button group"
                             variant="text"
                         >
-                            {dataBank.length ? dataBank.map((bank, i) => (
-                                <Button key={i}>{bank.name}</Button>
-                            )) : dataBank.name ? <Button>{dataBank.name}</Button> : <p>Código do banco não encontrado</p>}
+                            {dataBank.length ?
+                                dataBank.map((bank, i) => (<Link key={i} to="/Cadastro" ><Button size="large" onClick={() => selecionarBanco(bank)} key={i}>{bank.name}</Button ></Link>)) :
+                                dataBank.name ?
+                                <Link to="/Cadastro" ><Button>{dataBank.name}</Button></Link> : <p>Código do banco não encontrado</p>}
                         </ButtonGroup>
                     </Box>
                 </>

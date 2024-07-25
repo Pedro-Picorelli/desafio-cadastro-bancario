@@ -6,7 +6,7 @@ function Titulo({text, mensagemBotao}) {
     return(
         <div className={style.container}>
             <h1>{text}</h1>
-            {mensagemBotao ? <Link to="./Listagem" ><Botao text="Cadastre uma nova conta +" >{mensagemBotao}</Botao></Link> : ''}
+            {mensagemBotao ? <Link to="/Listagem" ><Botao text={mensagemBotao} ></Botao></Link> : ''}
         </div>
     )
 }
